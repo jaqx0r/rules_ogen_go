@@ -1,10 +1,10 @@
 # Bazel rules to generate a Go OpenAPI service handler and client from an OpenAPI specification.
 
-This is a bazel module that wraps the https://github.com/ogen-go/ogen code generator.
+This is a [Bazel](https://bazel.build) module that wraps the https://github.com/ogen-go/ogen code generator.
 
 Add to `MODULE.bazel`:
 
-``` bazel
+``` starlark
 bazel_dep(name = "rules_ogen_go", version = "0.0.0")
 git_override(
     module_name ="rules_ogen_go",
@@ -16,19 +16,19 @@ git_override(
 
 Add to the `BUILD.bazel`:
 
-``` bazel
+``` starlark
 load("@rules_ogen_go//:ogen_go")
 
 ogen_go(
-    name ="ogen",
+    name = "ogen",
     src = ":api.yaml",
-    package ="api",
+    package = "api",
 )
 
 go_library(
     name = "apiservice",
     srcs = [
-        "apiservice.go"
+        "apiservice.go",
     ],
     embed = [
         ":ogen", # keep
