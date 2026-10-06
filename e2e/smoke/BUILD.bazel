@@ -1,0 +1,13 @@
+load("@bazel_skylib//rules:build_test.bzl", "build_test")
+load("@rules_ogen_go//:ogen.bzl", "ogen_go")
+
+ogen_go(
+    name = "ogen",
+    src = "api.yaml",
+    package = "api",
+)
+
+build_test(
+    name = "smoke_test",
+    targets = [":ogen"],
+)
