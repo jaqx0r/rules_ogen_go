@@ -7,7 +7,7 @@ Add to `MODULE.bazel`:
 ``` starlark
 bazel_dep(name = "rules_ogen_go", version = "0.0.0")
 git_override(
-    module_name ="rules_ogen_go",
+    module_name = "rules_ogen_go",
     commit = "353e8604745de04cdf6808356e5f0cb45c810206",
     remote ="https://github.com/jaqx0r/rules_ogen_go.git",
 )

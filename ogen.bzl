@@ -46,8 +46,8 @@ OGEN_DEPS = [
     "@io_opentelemetry_go_otel//attribute:go_default_library",
     "@io_opentelemetry_go_otel//codes:go_default_library",
     "@io_opentelemetry_go_otel//semconv/v1.39.0:go_default_library",
-    "@io_opentelemetry_go_otel_metric//",
-    "@io_opentelemetry_go_ote_trace//:go_default_library",
+    "@io_opentelemetry_go_otel_metric//:go_default_library",
+    "@io_opentelemetry_go_otel_trace//:go_default_library",
     # end keep-sorted
 ]
 
@@ -133,7 +133,7 @@ def _ogen_go_impl(ctx):
         go_archive,
     ]
 
-ogen_go = rules(
+ogen_go = rule(
     implementation = _ogen_go_impl,
     doc = """Generate a Go API service handler from an OpenAPI specification.""",
     attrs = {
