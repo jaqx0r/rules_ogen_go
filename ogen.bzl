@@ -42,6 +42,7 @@ OGEN_DEPS = [
     "@com_github_ogen_go_ogen//otelogen:go_default_library",
     "@com_github_ogen_go_ogen//uri:go_default_library",
     "@com_github_ogen_go_ogen//validate:go_default_library",
+    "@com_github_yuin_goldmark//:go_default_library",
     "@io_opentelemetry_go_otel//:go_default_library",
     "@io_opentelemetry_go_otel//attribute:go_default_library",
     "@io_opentelemetry_go_otel//codes:go_default_library",

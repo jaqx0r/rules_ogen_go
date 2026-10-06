@@ -13,6 +13,7 @@ import (
 	_ "github.com/ogen-go/ogen/ogenregex"
 	_ "github.com/ogen-go/ogen/otelogen"
 	_ "github.com/ogen-go/ogen/validate"
+	_ "github.com/yuin/goldmark"
 	_ "go.opentelemetry.io/otel"
 	_ "go.opentelemetry.io/otel/attribute"
 	_ "go.opentelemetry.io/otel/codes"
